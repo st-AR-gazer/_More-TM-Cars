@@ -5,8 +5,11 @@ void DownloadFilesFromCDN() {
 }
 
 void WriteContent(const string &in reqBody, string path) {
+    string storagePath = path;
+
+
     IO::File targetFile;
-    targetFile.Open(path, IO::FileMode::Write);
+    targetFile.Open(storagePath, IO::FileMode::Write);
     targetFile.Write(reqBody);
     targetFile.Close();
     log("Finished writing to the file", LogLevel::Info, 29);
