@@ -12,7 +12,11 @@
 
 ## ⚠️ Important Notes
 
-**Due to the fact that this can be used for cheating, this is not a plugin I am going to release, it is important to mention this so people don't get the wrong idea xdd, also if you somehow got your hands on this, please remove it, or well at least don't share it peepoShy** 
+**Due to the fact that this can be used for cheating, this is not a plugin I am going to release, it is important to mention this so people don't get the wrong idea xdd (I will release it if nadeo fixes the issues tho Copium)**
+
+**I'm mostly using this as a learning experience to understand how walking through fids and nods work**
+
+**If you somehow got your hands on this, please remove it, or well at least don't share it peepoShy**
 
 ## Prerequisites
 
