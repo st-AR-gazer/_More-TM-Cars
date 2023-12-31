@@ -6,11 +6,12 @@ void DownloadFilesFromCDN() {
 
 void WriteContent(const string &in reqBody, string path) {
     string storagePath = path;
+    print(path);
 
-
+/*
     IO::File targetFile;
     targetFile.Open(storagePath, IO::FileMode::Write);
     targetFile.Write(reqBody);
     targetFile.Close();
-    log("Finished writing to the file", LogLevel::Info, 29);
+    log("Finished writing to the file", LogLevel::Info, 29);*/
 }

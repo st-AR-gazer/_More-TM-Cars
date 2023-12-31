@@ -1,10 +1,11 @@
 void DownloadControlCamera() {
+    /*
     string path = IO::FromAppFolder("GameData/Vehicles/ControlCamera");
 
     array<string> urls = {
-        "http://maniacdn.net/ar_/More-TM-Cars/Vehicles/Vehicles/ControlCamera/CameraInternalCanyon.CtrlCam.Gbx",
-        "http://maniacdn.net/ar_/More-TM-Cars/Vehicles/Vehicles/ControlCamera/CameraInternalStadium.CtrlCam.Gbx.VehicleCameraInternalModel.gbx",
-        "http://maniacdn.net/ar_/More-TM-Cars/Vehicles/Vehicles/ControlCamera/CameraInternalValley.CtrlCam.Gbx"
+        // "http://maniacdn.net/ar_/More-TM-Cars/Vehicles/Vehicles/ControlCamera/CameraInternalCanyon.CtrlCam.Gbx",
+        // "http://maniacdn.net/ar_/More-TM-Cars/Vehicles/Vehicles/ControlCamera/CameraInternalStadium.CtrlCam.Gbx.VehicleCameraInternalModel.gbx",
+        // "http://maniacdn.net/ar_/More-TM-Cars/Vehicles/Vehicles/ControlCamera/CameraInternalValley.CtrlCam.Gbx"
     };
 
     for (uint i = 0; i < urls.get_Length(); i++) {
@@ -23,4 +24,5 @@ void DownloadControlCamera() {
             log("Error fetching file (ControlCamera): \n" + req.String(), LogLevel::Error, 20);
         }
     }
+    */
 }
