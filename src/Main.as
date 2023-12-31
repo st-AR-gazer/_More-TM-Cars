@@ -1,6 +1,6 @@
 string checkFilePath = IO::FromStorageFolder("initCheck.txt");
 
-string url = "http://maniacdn.net/ar_/";
+// string url = "http://maniacdn.net/ar_/";
 string gameData = IO::FromAppFolder("gameData");
 string vehiclesDir = gameData + "\\vehicles";
 
@@ -13,7 +13,7 @@ void Main() {
 
     CreateFolderStructure();
     sleep(100);
-    DownloadFilesFromCDN();
+    DownloadingFromCDN();
 }
 
 
