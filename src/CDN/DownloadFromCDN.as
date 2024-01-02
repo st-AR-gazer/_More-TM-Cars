@@ -47,7 +47,7 @@ void WriteContent(const string &in reqBody, string storagePath, bool skip) {
 }
 
 void PreloadZip() {
-    auto fid = Fids::GetUser(docsTrackmania);
+    auto fid = Fids::GetUser("_more-TM-Cars-gameData_Temporary\\Vehicles.zip");
     print(fid.FullFileName);
 
     CPlugFileZip@ zipFile = cast<CPlugFileZip>(Fids::Preload(fid));
