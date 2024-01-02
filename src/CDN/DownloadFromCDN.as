@@ -48,6 +48,7 @@ void WriteContent(const string &in reqBody, string storagePath, bool skip) {
 
 void PreloadZip() {
     auto fid = Fids::GetUser(docsTrackmania);
+    print(fid.FullFileName);
 
     CPlugFileZip@ zipFile = cast<CPlugFileZip>(Fids::Preload(fid));
 
