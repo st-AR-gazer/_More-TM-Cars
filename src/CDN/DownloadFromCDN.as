@@ -51,8 +51,7 @@ void PreloadZip() {
 
     if (zipFile !is null) {
         log("Casting successful", LogLevel::Info, 53);
-
-        print(zipFile.Location.FullDirName);
+        zipFile.UiInstallFidsInSubFolder();
         ExtractZipInfo();
     } else {
         log("Failed to cast nod to CPlugFileZip", LogLevel::Error, 55);
