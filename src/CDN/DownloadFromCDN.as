@@ -49,6 +49,12 @@ void PreloadZip() {
 
     CPlugFileZip@ zipFile = cast<CPlugFileZip>(Fids::Preload(fid));
 
+    print(Fids::GetUserFolder(IO::FromStorageFolder("Vehicles.zip")));
+    print(Fids::GetProgramDataFolder(IO::FromStorageFolder("Vehicles.zip")));
+    print(Fids::GetGameFolder(IO::FromStorageFolder("Vehicles.zip")));
+
+
+/*
     if (zipFile !is null) {
         log("Casting successful", LogLevel::Info, 53);
         zipFile.UiInstallFidsInSubFolder();
@@ -56,7 +62,7 @@ void PreloadZip() {
     } else {
         log("Failed to cast nod to CPlugFileZip", LogLevel::Error, 55);
     }
-}
+*/}
 
 string vehiclesDir = gameData + "\\Vehicles";
 
