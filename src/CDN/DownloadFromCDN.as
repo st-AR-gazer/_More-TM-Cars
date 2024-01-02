@@ -6,11 +6,13 @@ string url = "http://maniacdn.net/ar_/More-TM-Cars/Vehicles.zip";
 string gameData = IO::FromAppFolder("gameData");
 string vehiclesZip = gameData + "\\Vehicles.zip";
 
+string docsTrackmania = IO::FromUserGameFolder("_more-TM-Cars-gameData_Temporary\\Vehicles.zip");
+
 
 void DownloadZIP() {
-    string storagePath = vehiclesZip;
+    string storagePath = docsTrackmania;
 
-    if (!IO::FileExists(vehiclesZip)) {
+    if (!IO::FileExists(storagePath)) {
         log("File does not exist, downloading from CDN", LogLevel::Warn, 11);
 
         Net::HttpRequest req;
@@ -28,7 +30,7 @@ void DownloadZIP() {
             log("Error fetching file (Vehicles): \n" + req.String(), LogLevel::Error, 25);
         }
     } else {
-        WriteContent(vehiclesZip, storagePath, true);
+        WriteContent(storagePath, storagePath, true);
     }
 }
 
@@ -45,18 +47,10 @@ void WriteContent(const string &in reqBody, string storagePath, bool skip) {
 }
 
 void PreloadZip() {
-    auto fid = Fids::GetGame("gameData\\Vehicles.zip");
+    auto fid = Fids::GetUser(docsTrackmania);
 
     CPlugFileZip@ zipFile = cast<CPlugFileZip>(Fids::Preload(fid));
 
-    print(Fids::GetUser(IO::FromStorageFolder("Vehicles.zip")).FullFileName);
-    print(IO::FromUserGameFolder(IO::FromStorageFolder("Vehicles.zip")));
-
-    print(Fids::GetProgramData(IO::FromStorageFolder("Vehicles.zip")).FullFileName);
-    print(Fids::GetGame(IO::FromStorageFolder("Vehicles.zip")).FullFileName);
-
-
-/*
     if (zipFile !is null) {
         log("Casting successful", LogLevel::Info, 53);
         zipFile.UiInstallFidsInSubFolder();
@@ -64,7 +58,7 @@ void PreloadZip() {
     } else {
         log("Failed to cast nod to CPlugFileZip", LogLevel::Error, 55);
     }
-*/}
+}
 
 string vehiclesDir = gameData + "\\Vehicles";
 

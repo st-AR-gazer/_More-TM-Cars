@@ -1,6 +1,11 @@
 bool doCreateFolderStructure = false;
 
 void CreateFolderStructure() {
+
+    if (!IO::FolderExists(IO::FromUserGameFolder("_more-TM-Cars-gameData_Temporary"))) {
+        IO::CreateFolder(IO::FromUserGameFolder("_more-TM-Cars-gameData_Temporary"));
+    }
+
     if (!doCreateFolderStructure) return;
 
     if (!IO::FolderExists(IO::FromAppFolder("gameData"))) {
