@@ -1,10 +1,5 @@
 string checkFilePath = IO::FromStorageFolder("initCheck.txt");
 
-// string url = "http://maniacdn.net/ar_/";
-string gameData = IO::FromAppFolder("gameData");
-string vehiclesDir = gameData + "\\vehicles";
-
-
 void Main() {
     sleep(100);
 
@@ -15,7 +10,6 @@ void Main() {
     sleep(100);
     DownloadingFromCDN();
 }
-
 
 void CreateCheckFile() {
     IO::File checkFile;

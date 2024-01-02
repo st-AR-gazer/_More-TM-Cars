@@ -1,4 +1,8 @@
+bool doCreateFolderStructure = false;
+
 void CreateFolderStructure() {
+    if (!doCreateFolderStructure) return;
+
     if (!IO::FolderExists(IO::FromAppFolder("gameData"))) {
         IO::CreateFolder(IO::FromAppFolder("gameData"));
     }
