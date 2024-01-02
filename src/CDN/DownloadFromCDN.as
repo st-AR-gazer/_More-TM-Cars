@@ -49,9 +49,9 @@ void PreloadZip() {
 
     CPlugFileZip@ zipFile = cast<CPlugFileZip>(Fids::Preload(fid));
 
-    print(Fids::GetUserFolder(IO::FromStorageFolder("Vehicles.zip")));
-    print(Fids::GetProgramDataFolder(IO::FromStorageFolder("Vehicles.zip")));
-    print(Fids::GetGameFolder(IO::FromStorageFolder("Vehicles.zip")));
+    print(Fids::GetUser(IO::FromStorageFolder("Vehicles.zip")));
+    print(Fids::GetProgramData(IO::FromStorageFolder("Vehicles.zip")));
+    print(Fids::GetGame(IO::FromStorageFolder("Vehicles.zip")));
 
 
 /*
