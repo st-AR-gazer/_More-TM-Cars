@@ -1,6 +1,7 @@
 string checkFilePath = IO::FromStorageFolder("initCheck.txt");
 
 void Main() {
+    ExtractionTests();
     sleep(100);
 
     if (IO::FileExists(checkFilePath) and IO::FileExists(IO::FromAppFolder("gameData/changelog.txt"))) return;
@@ -9,6 +10,7 @@ void Main() {
     CreateFolderStructure();
     sleep(100);
     DownloadingFromCDN();
+
 }
 
 void CreateCheckFile() {

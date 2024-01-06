@@ -1,4 +1,5 @@
 void DownloadingFromCDN() {
+    return;
     DownloadZIP();
 }
 
@@ -9,8 +10,15 @@ string vehiclesZip = gameData + "\\Vehicles.zip";
 string docsTrackmania = IO::FromUserGameFolder("_more-TM-Cars-gameData_Temporary\\Vehicles.zip");
 
 
+// string testLocation = IO::FromAppFolder("gameData\\Vehicles.zip");
+string testLocation = IO::FromDataFolder("");
+
+
+
 void DownloadZIP() {
-    string storagePath = docsTrackmania;
+    testLocation = IO::FromDataFolder("_more-TM-Cars-gameData_Temporary\\Vehicles.zip");
+
+    string storagePath = testLocation;
 
     if (!IO::FileExists(storagePath)) {
         log("File does not exist, downloading from CDN", LogLevel::Warn, 11);
@@ -47,7 +55,13 @@ void WriteContent(const string &in reqBody, string storagePath, bool skip) {
 }
 
 void PreloadZip() {
+
+    print(Fids::GetResource(IO::FromStorageFolder("Vehicles.zip")).FullFileName);
+
     auto fid = Fids::GetUser("_more-TM-Cars-gameData_Temporary\\Vehicles.zip");
+
+
+
     print(fid.FullFileName);
 
     CPlugFileZip@ zipFile = cast<CPlugFileZip>(Fids::Preload(fid));
